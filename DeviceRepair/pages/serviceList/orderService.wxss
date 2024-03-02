@@ -1,0 +1,36 @@
+/* pages/serviceList/orderService.wxss */
+
+.header {
+  background-color: #1aad19; /* 使用微信主题色 */
+  padding: 10px;
+  text-align: center;
+}
+
+.header-title {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.order-form {
+  padding: 10px;
+}
+
+.form-item {
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-button {
+  background-color: #1aad19;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}

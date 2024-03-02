@@ -1,0 +1,67 @@
+/* pages/serviceDetail/serviceDetail.wxss */
+.header {
+  background-color: #1aad19; /* 使用微信主题色 */
+  padding: 10px;
+  text-align: center;
+}
+
+.header-title {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.sort-button {
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: #6bffc1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.order-stats-container {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.order-stats {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.service-list-container {
+  padding: 10px;
+}
+
+.service-card {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: rgb(255, 224, 224);
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.service-image {
+  width: 150px;
+  height: 50px;
+  margin-right: 90px;
+  border-radius: 5px;
+}
+
+.service-name {
+  font-size: 16px;
+  color: #333;
+}

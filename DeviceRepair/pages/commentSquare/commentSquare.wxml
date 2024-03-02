@@ -1,0 +1,54 @@
+<!--pages/commentSquare/commentSquare.wxml-->
+<!-- 发帖按钮 -->
+<view class="comment-square-container">
+  <button class="post-button" bindtap="togglePostPopup">我要发帖</button>
+  <view class="post-popup" hidden="{{!showPopup}}">
+      <view class="post-form">
+          <input class="input-title" placeholder="标题" 
+                 bindinput="handleInputTitle" 
+                 data-field="title"/>
+          <textarea class="input-content" placeholder="内容" 
+                    bindinput="handleInputContent" 
+                    data-field="content"></textarea>
+          <button class="submit-button" bindtap="submitPost">发表</button>
+          <button class="cancel-button" bindtap="togglePostPopup">取消</button>
+      </view>
+  </view>
+
+<view class="search-container">
+  <input class="search-input" placeholder="搜索帖子" bindinput="inputSearch"/>
+  <icon type="search" class="search-icon" bindtap="searchPosts"></icon>
+</view>
+
+
+<view class="order-stats-container">
+    <view class="sort-button" bindtap="sortById">按ID排序</view>
+    <!-- 添加统计信息显示 -->
+    <view class="order-stats">
+      <text>帖子数量：{{orderCount}} </text>
+      <!-- <text>  </text>
+      <text>平均价格：¥{{averagePrice}}</text> -->
+    </view>
+  </view>
+
+  <scroll-view scroll-y="true">
+    <block wx:for="{{forum_post_list}}" wx:key="PostID">
+      <view class="post-item" bindtap="onPostClick" data-postid="{{item.PostID}}">
+        <image src="../../res/images/用户头像.png" class="post-image"/>
+        <view class="post-info">
+          <text class="post-title">{{item.Title}}</text>
+          <text class="post-content">{{item.Content}}</text>
+        </view>
+        <view class="post-footer">
+          <text>
+          发帖人: {{item.UserID}}
+
+          发帖时间: {{item.PostTime}}
+
+          更新时间: {{item.UpdateTime}}
+          </text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

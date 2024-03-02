@@ -1,0 +1,53 @@
+<!--pages/minePage/minePage.wxml-->
+<import src='template.wxml' />
+
+<view class='loginHeader'>
+     <!-- 显示用户微信头像和昵称 -->
+     <block wx:if="{{hasUserInfo}}">
+          <image src='{{userInfo.avatarUrl}}' class='userHead' mode='aspectFill' bindtap='previewHead' />
+          <text class='userTitle'>{{userInfo.nickName}}</text>
+     </block>
+     <!-- 未获取用户信息时显示默认头像和点击登录文本 -->
+     <block wx:else>
+          <image src='../../res/images/ic_mine_normal.png' class='userHead' mode='aspectFill' bindtap='loginTap' />
+          <text class='userTitle' bindtap='loginTap'>点击登录</text>
+     </block>
+</view>
+
+<view class='order'>
+     <view class='item' bindtap='allOrderTap'>
+          <image src='../../res/images/ic_order_all.png' mode='widthFix' class='icon' />
+          <text class='text'>全部订单</text>
+     </view>
+     <view class='vercialLine'>
+     </view>
+     <view class='item' bindtap='todoOrderTap'>
+          <image src='../../res/images/ic_order_book.png' mode='widthFix' class='icon' />
+          <text class='text'>未完成订单</text>
+     </view>
+</view>
+
+<view class='infoSection'>
+     <template is='settingItem' data="{{caption:'我的性别',value:memberType}}" />
+     <template is='settingItem' data="{{caption:'我的地址',value:points}}" />
+     <template is='settingItem' data="{{caption:'我的个签',value:coupons}}" />
+</view>
+
+<button class='editInfoButton' bindtap='toggleEditPopup'>修改个人信息</button>
+
+<!-- 编辑个人信息的弹窗 -->
+<view class='edit-popup' hidden="{{!showPopup}}">
+    <view class='edit-form'>
+        <input class='input-field' placeholder='性别' 
+               bindinput='handleInputChange' 
+               data-field='memberType' value='{{memberType}}'/>
+        <input class='input-field' placeholder='地址' 
+               bindinput='handleInputChange' 
+               data-field='points' value='{{points}}'/>
+        <input class='input-field' placeholder='个签' 
+               bindinput='handleInputChange' 
+               data-field='coupons' value='{{coupons}}'/>
+        <button class='submit-button' bindtap='submitEdit'>保存</button>
+        <button class='cancel-button' bindtap='toggleEditPopup'>取消</button>
+    </view>
+</view>

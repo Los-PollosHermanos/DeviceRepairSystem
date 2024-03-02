@@ -1,0 +1,91 @@
+/* pages/homePage/homePage.wxss */
+
+Page {
+  width: 100%;
+  height: 100%;
+}
+
+.homeHeader {
+  width: 100%;
+  height: 340rpx;
+}
+
+.homeHeader .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.homeHeader .wx-swiper-dots.wx-swiper-dots-horizontal {
+  margin-bottom: 5rpx;
+}
+
+.homeHeader .wx-swiper-dot {
+  width: 40rpx;
+  display: inline-flex;
+  height: 10rpx;
+  /* margin-left: 20rpx; */
+  justify-content: space-between;
+}
+
+.homeHeader .wx-swiper-dot::before {
+  content: '';
+  flex-grow: 1;
+  background: white;
+  border-radius: 8rpx;
+}
+
+.homeHeader .wx-swiper-dot-active::before {
+  background: #00A3FF;
+}
+
+.text-container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #8bedfa;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.text-content {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.feature-scroll-view {
+  white-space: nowrap;
+  overflow-x: auto;
+  padding: 10px 0;
+  padding-left: 10px; /* 第一个图标前的间距 */
+  padding-right: 10px; /* 最后一个图标后的间距 */
+}
+
+.feature-item {
+  display: inline-flex; /* 使用 flex 布局 */
+  flex-direction: column; /* 垂直布局 */
+  align-items: center; /* 水平居中对齐 */
+  margin-right: 35px; /* 图标之间的间距 */
+  width: 60px; /* 宽度调整，可以根据需要调整 */
+}
+
+.feature-icon {
+  width: 50px; /* 图标的宽度 */
+  height: 50px; /* 图标的高度 */
+  margin-bottom: 5px; /* 图标和文字之间的间距 */
+}
+
+.feature-name {
+  color: #1E90FF; /* 海蓝色 */
+  font-size: 12px; /* 字体大小调整 */
+}
+
+.homePageImage {
+  margin-top: 30px;
+  margin-left: 17px;
+  border-radius: 50rpx;
+  width: 380px;
+  height: 170px;
+  margin-right: 90px;
+}

@@ -1,0 +1,40 @@
+<!--pages/checkWeather/weatherHistory.wxml-->
+<view class="order-list-container">
+  <!-- 搜索框 -->
+  <view class="search-container">
+    <input class="search-input" placeholder="搜索天气类型" bindinput="inputSearch"/>
+    <icon type="search" class="search-icon" bindtap="searchOrders"></icon>
+  </view>
+
+  <view class="order-stats-container">
+    <view class="sort-button" bindtap="sortById">按ID排序</view>
+    <!-- 添加统计信息显示 -->
+    <view class="order-stats">
+      <text>天气记录数量：{{orderCount}} </text>
+      <!-- <text>  </text>
+      <text>平均价格：¥{{averagePrice}}</text> -->
+    </view>
+  </view>
+
+  <!-- 订单列表 -->
+  <scroll-view scroll-y="true">
+    <block wx:for="{{order_list}}" wx:key="order_id">
+      <view class="order-item" bindtap="onOrderClick" data-orderid="{{item.id}}">
+        <!-- 订单信息 -->
+        <view class="order-info">
+          <text class="order-address">城市：{{item.city}}</text>
+          <text class="order-remarks">温度：{{item.temperature}}</text>
+        </view>
+        <!-- 订单状态、价格、维修人员ID -->
+        <view class="order-footer">
+          <text>
+          状态: {{item.weather_type}}
+          风向: {{item.wind}}
+          时间: {{item.create_time}}</text>
+        </view>
+        <!-- 删除订单按钮 -->
+        <button class="delete-button" bindtap="deleteOrder" data-orderid="{{item.id}}">删除记录</button>
+      </view>
+    </block>
+  </scroll-view>
+</view>

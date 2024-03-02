@@ -1,0 +1,159 @@
+/* pages/commentSquare/commentSquare.wxss */
+.post-button {
+  /* 按钮样式 */
+}
+
+.post-popup {
+  position: fixed; /* 固定定位 */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+  z-index: 1000; /* 高层级以确保在列表上方 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%; /* 调整为合适的宽度 */
+  z-index: 1001; /* 确保表单在背景上方 */
+}
+
+.input-title, .input-content {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.submit-button, .cancel-button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.search-container {
+  display: flex;
+  padding: 10px;
+}
+
+.search-input {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-icon {
+  color:#1aad19;
+  font-size: 25px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.sort-button {
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: #6bffc1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.order-stats-container {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.order-stats {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* 设置scroll-view的样式 */
+scroll-view {
+  width: 100%;
+  height: 100%;
+}
+
+/* 设置帖子项的样式 */
+.post-item {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+/* 设置帖子图片的样式 */
+.post-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%; /* 使图片呈现圆形 */
+}
+
+/* 设置帖子信息部分的样式 */
+.post-info {
+  flex: 1;
+}
+
+/* 设置帖子标题的样式 */
+.post-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* 设置帖子内容的样式 */
+.post-content {
+  font-size: 14px;
+  color: #666;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8; /* 显示最多3行 */
+  overflow: hidden;
+  text-overflow: ellipsis; /* 超出部分显示省略号 */
+}
+
+/* 设置帖子底部信息的样式 */
+.post-footer {
+  width: 80px;
+  font-size: 10px;
+  color: #999;
+  margin-top: 10px;
+  margin-left: 10px;
+  }
+
+  /* pages/commentSquare/commentSquare.wxss */
+
+.post-button {
+  margin: 20px;
+  padding: 10px;
+  background-color: #1aad19;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.post-form input, .post-form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

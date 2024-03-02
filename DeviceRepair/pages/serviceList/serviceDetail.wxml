@@ -1,0 +1,23 @@
+<!-- pages/serviceDetail/serviceDetail.wxml -->
+<view class="header">
+  <text class="header-title">请您选择具体需要的服务</text>
+</view>
+
+<view class="order-stats-container">
+    <view class="sort-button" bindtap="sortById">按ID排序</view>
+    <!-- 添加统计信息显示 -->
+    <view class="order-stats">
+      <text>具体服务数量：{{orderCount}} </text>
+      <!-- <text>  </text>
+      <text>平均价格：¥{{averagePrice}}</text> -->
+    </view>
+  </view>
+  
+<view class="service-detail-container">
+  <block wx:for="{{serviceCategories}}" wx:key="category_id">
+    <view class="service-card" bindtap="goToOrderService" data-categoryid="{{item.category_id}}">
+      <image src="../../res/images/服务类型.jpg" class="service-image"/>
+      <text class="service-name">{{item.category_name}}</text>
+    </view>
+  </block>
+</view>

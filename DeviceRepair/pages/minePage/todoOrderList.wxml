@@ -1,0 +1,40 @@
+<!--pages/minePage/todoOrderList.wxml-->
+<view class="order-list-container">
+  <!-- 搜索框 -->
+  <view class="search-container">
+    <input class="search-input" placeholder="搜索未完成订单描述" bindinput="inputSearch"/>
+    <icon type="search" class="search-icon" bindtap="searchTodoOrders"></icon>
+  </view>
+
+  <view class="order-stats-container">
+    <view class="sort-button" bindtap="sortById">按ID排序</view>
+    <!-- 添加统计信息显示 -->
+    <view class="order-stats">
+      <text>未完成订单数量：{{orderCount}} </text>
+      <text>  </text>
+      <text>平均价格：¥{{averagePrice}}</text>
+    </view>
+  </view>
+
+  <!-- 订单列表 -->
+  <scroll-view scroll-y="true">
+    <block wx:for="{{todo_order_list}}" wx:key="order_id">
+      <view class="order-item" bindtap="onOrderClick" data-orderid="{{item.order_id}}">
+        <!-- 订单信息 -->
+        <view class="order-info">
+          <text class="order-address">地址：{{item.address}}</text>
+          <text class="order-remarks">描述：{{item.remarks}}</text>
+        </view>
+        <!-- 订单状态、价格、维修人员ID -->
+        <view class="order-footer">
+          <text>
+          状态: {{item.status}}
+          价格: ¥{{item.actual_price}}
+          维修员ID: {{item.repairman_id}}</text>
+        </view>
+        <!-- 删除订单按钮 -->
+        <button class="delete-button" bindtap="deleteOrder" data-orderid="{{item.order_id}}">删除订单</button>
+      </view>
+    </block>
+  </scroll-view>
+</view>

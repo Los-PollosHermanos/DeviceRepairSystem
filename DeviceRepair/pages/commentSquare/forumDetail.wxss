@@ -1,0 +1,42 @@
+/* pages/commentSquare/forumDetail.wxss */
+/* pages/forumDetail/forumDetail.wxss */
+
+.detail-container {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.detail-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.detail-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* 圆形图片 */
+  margin-right: 10px;
+  margin-left: 13px;
+}
+
+.detail-info {
+  flex-grow: 1;
+  font-size: 12px;
+  margin-left: 80px;
+}
+
+.post-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.post-content {
+  font-size: 16px;
+  color: #666;
+}

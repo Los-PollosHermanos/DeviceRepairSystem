@@ -1,0 +1,19 @@
+<!--pages/homePage/homePage.wxml-->
+<swiper class='homeHeader' indicator-dots autoplay interval='3000' circular skip-hidden-item-layout>
+     <swiper-item class='swiper' wx:for="{{homeAdvertises}}">
+          <image src='{{item.imgSrc}}' mode='scaleToFill' class='swiper' bindtap='homeAdvertisesTap' data-index='{{index}}'></image>
+     </swiper-item>
+</swiper>
+
+<view class="text-container">
+  <text class="text-content">江安维修站，竭诚为您服务！</text>
+</view>
+
+<scroll-view scroll-x="true" class="feature-scroll-view">
+    <view class="feature-item" wx:for="{{features}}" bindtap="onFeatureTap" data-id="{{item.id}}">
+        <image src="{{'../../res/images/' + item.icon}}" class="feature-icon"></image>
+        <text class="feature-name">{{item.name}}</text>
+    </view>
+</scroll-view>
+
+<image src="../../res/images/服务类型.jpg" class="homePageImage"/>

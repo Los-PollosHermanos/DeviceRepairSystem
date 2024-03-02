@@ -1,0 +1,74 @@
+/* pages/checkWeather/checkWeather.wxss */
+.content{
+  font-family: 微软雅黑，宋体;
+  font-size: 14px;
+  background-size: cover;
+  height: 100%;
+  width:100%;
+color: #333333;
+}
+.today{
+  padding-top: 70rpx;
+  height: 50%;
+}
+.temp{
+  font-size: 100px;
+  text-align: center;
+}
+.city{
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20rpx;
+  margin-right: 10rpx;
+}
+.lowhigh{
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20rpx;
+  margin-right: 10rpx;
+}
+.type{
+  font-size: 16px;
+  text-align: center;
+  margin-top: 30rpx;
+}
+.timezone{
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.weather{
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.length{
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.container {
+  margin-left: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-item {
+  display: inline-flex; /* 使用 flex 布局 */
+  flex-direction: column; /* 垂直布局 */
+  align-items: center; /* 水平居中对齐 */
+  width: 60px; /* 宽度调整，可以根据需要调整 */
+}
+
+.feature-icon {
+  width: 50px; /* 图标的宽度 */
+  height: 50px; /* 图标的高度 */
+  margin-bottom: 5px; /* 图标和文字之间的间距 */
+}
+
+.feature-name {
+  color: #1E90FF; /* 海蓝色 */
+  font-size: 10px; /* 字体大小调整 */
+}

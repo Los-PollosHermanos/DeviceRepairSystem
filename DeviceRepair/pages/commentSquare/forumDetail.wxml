@@ -1,0 +1,20 @@
+<!--pages/commentSquare/forumDetail.wxml-->
+<!-- pages/forumDetail/forumDetail.wxml -->
+<view class="detail-container">
+  <view class="detail-header">
+    <image src="../../res/images/用户头像.png" class="detail-image"/>
+    <view class="detail-info">
+      <text>
+      发帖人: {{detail.UserID}}
+
+      发帖时间: {{detail.PostTime}}
+
+      更新时间: {{detail.UpdateTime}}
+      </text>
+    </view>
+  </view>
+  <text class="post-title">{{detail.Title}}</text>
+  <view> </view>
+  <view> </view>
+  <text class="post-content">{{detail.Content}}</text>
+</view>

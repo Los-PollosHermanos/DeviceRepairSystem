@@ -1,0 +1,21 @@
+<!--pages/checkWeather/checkWeather.wxml-->
+<view class="content">
+<view class="today">
+<view class="info">
+<view class="temp">{{temp}}℃</view>
+<!-- <view class="lowhigh">{{low}}/{{high}}</view> -->
+<view class="type">{{type}}</view>
+<view class="city">{{city}}</view>
+<view class="timezone">时区：{{timezone}}</view>
+<view class="week">{{week}}</view>
+<view class="weather">{{weather}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="container">
+  <view class="feature-item" bindtap="onFeatureTap">
+      <image src="../../res/images/查看天气.png" class="feature-icon"></image>
+      <text class="feature-name">查看历史天气</text>
+  </view>
+</view>
